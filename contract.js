@@ -166,6 +166,7 @@ module.exports = class {
             return false;
         }
 
+        console.log('--------------dsnode ', tx.cid)
         var dsnode = this.ds.node(tx.cid)
 
         console.log('TX:', tx);
@@ -175,6 +176,7 @@ module.exports = class {
         // Сохраним результат работы
         tx.done = 1
         tx.result = res
+        dsnode.save()
         this.write_transaction(id, JSON.stringify(tx))
     }
 

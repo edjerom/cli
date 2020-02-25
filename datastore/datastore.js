@@ -9,10 +9,7 @@ module.exports = class {
 
     init(){
         this.path = './contracts/datastore/';
-
-        if (!fs.existsSync('./contracts')) fs.mkdirSync('./contracts');
-
-        if (!fs.existsSync(this.path)) fs.mkdirSync(this.path);
+        if (!fs.existsSync(this.path)) fs.mkdirSync(this.path, {recursive: true});
     }
 
     adr(id){

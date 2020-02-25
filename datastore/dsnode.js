@@ -4,7 +4,9 @@ const md5 = require('md5');
 module.exports = class {
     constructor(path) {
         this.path = path
-        this.data = {}
+        this.load()
+        this.data = this.data || {}
+        console.log('dsnode adr=', path)
     }
 
     load() {

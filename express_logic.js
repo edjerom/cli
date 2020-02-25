@@ -8,6 +8,7 @@ module.exports = class {
 
         this.app.use(express.static('./gui'))
         this.app.use('/mfc', express.static('./gui_mfc'))
+        this.app.use('/test', express.static('./gui_test'))
 
         this.nl = nl;
         this.store = store;
